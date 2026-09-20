@@ -1,0 +1,18 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.s9local.app'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.s9local.app'
+        minSdk 31
+        targetSdk 36
+        versionCode 14
+        versionName '0.2.10'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+}
+
+
+
+
+

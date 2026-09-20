@@ -1,0 +1,12 @@
+{
+  "name": "s9-local",
+  "version": "0.2.10",
+  "private": true,
+  "scripts": {
+    "preview": "node preview.cjs",
+    "test:ui": "node tests/ui.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

@@ -1,0 +1,4 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.s9local.tests">
+    <application android:label="S9 startup tests" />
+    <instrumentation android:name=".StartupInstrumentation" android:targetPackage="com.s9local.app" android:functionalTest="true" />
+</manifest>

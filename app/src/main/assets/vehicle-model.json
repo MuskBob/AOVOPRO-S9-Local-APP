@@ -1,0 +1,599 @@
+{
+  "modelId": "erz7ok",
+  "services": [
+    {
+      "actions": [],
+      "code": "",
+      "description": "",
+      "events": [],
+      "name": "默认服务",
+      "properties": [
+        {
+          "abilityId": 1,
+          "accessMode": "rw",
+          "code": "blelock_switch",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_lock",
+            "attribute": "1664"
+          },
+          "name": "锁车开关",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 2,
+          "accessMode": "ro",
+          "code": "speed",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_wind",
+            "attribute": "1664"
+          },
+          "name": "速度",
+          "typeSpec": {
+            "type": "value",
+            "max": 2000,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "km/h"
+          }
+        },
+        {
+          "abilityId": 3,
+          "accessMode": "ro",
+          "code": "battery_percentage",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_battery",
+            "attribute": "1664"
+          },
+          "name": "电池电量",
+          "typeSpec": {
+            "type": "value",
+            "max": 100,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "%"
+          }
+        },
+        {
+          "abilityId": 4,
+          "accessMode": "ro",
+          "code": "endurance_mileage",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-tongji2",
+            "attribute": "1152"
+          },
+          "name": "续航里程",
+          "typeSpec": {
+            "type": "value",
+            "max": 2000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "KM"
+          }
+        },
+        {
+          "abilityId": 5,
+          "accessMode": "ro",
+          "code": "mileage_once",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-tongji2",
+            "attribute": "1664"
+          },
+          "name": "单次里程",
+          "typeSpec": {
+            "type": "value",
+            "max": 2000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "KM"
+          }
+        },
+        {
+          "abilityId": 6,
+          "accessMode": "ro",
+          "code": "ridetime_once",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_time3",
+            "attribute": "1664"
+          },
+          "name": "单次骑行时间",
+          "typeSpec": {
+            "type": "value",
+            "max": 86400,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "s"
+          }
+        },
+        {
+          "abilityId": 7,
+          "accessMode": "ro",
+          "code": "avgspeed_once",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_wind",
+            "attribute": "1152"
+          },
+          "name": "单次平均速度",
+          "typeSpec": {
+            "type": "value",
+            "max": 2000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "km/h"
+          }
+        },
+        {
+          "abilityId": 8,
+          "accessMode": "rw",
+          "code": "headlight_switch",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power2",
+            "attribute": "1152"
+          },
+          "name": "前大灯开关",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 11,
+          "accessMode": "rw",
+          "code": "unit_set",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1152"
+          },
+          "name": "单位设置",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "km",
+              "mile"
+            ]
+          }
+        },
+        {
+          "abilityId": 12,
+          "accessMode": "ro",
+          "code": "mileage_total",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-tongji2",
+            "attribute": "1152"
+          },
+          "name": "总里程",
+          "typeSpec": {
+            "type": "value",
+            "max": 5000000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "KM"
+          }
+        },
+        {
+          "abilityId": 13,
+          "accessMode": "rw",
+          "code": "cruise_switch",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power2",
+            "attribute": "1152"
+          },
+          "name": "定速巡航",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 15,
+          "accessMode": "rw",
+          "code": "mode",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1152"
+          },
+          "name": "模式",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "walk",
+              "eco",
+              "normal",
+              "sport"
+            ]
+          }
+        },
+        {
+          "abilityId": 16,
+          "accessMode": "rw",
+          "code": "start_mode",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1152"
+          },
+          "name": "启动模式",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "zero_start",
+              "not_zero_start"
+            ]
+          }
+        },
+        {
+          "abilityId": 18,
+          "accessMode": "ro",
+          "code": "temp_current",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_c",
+            "attribute": "1152"
+          },
+          "name": "当前温度",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "℃"
+          }
+        },
+        {
+          "abilityId": 19,
+          "accessMode": "ro",
+          "code": "battery_status",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_battery",
+            "attribute": "1152"
+          },
+          "name": "电池信息",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "normal"
+            ]
+          }
+        },
+        {
+          "abilityId": 20,
+          "accessMode": "ro",
+          "code": "voltage_current",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_lightning",
+            "attribute": "1152"
+          },
+          "name": "当前电压",
+          "typeSpec": {
+            "type": "value",
+            "max": 100000,
+            "min": 0,
+            "scale": 2,
+            "step": 1,
+            "unit": "V"
+          }
+        },
+        {
+          "abilityId": 21,
+          "accessMode": "ro",
+          "code": "cur_current",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_0",
+            "attribute": "1152"
+          },
+          "name": "当前电流",
+          "typeSpec": {
+            "type": "value",
+            "max": 10000,
+            "min": 0,
+            "scale": 2,
+            "step": 1,
+            "unit": "A"
+          }
+        },
+        {
+          "abilityId": 22,
+          "accessMode": "ro",
+          "code": "power_current",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_lightning",
+            "attribute": "1152"
+          },
+          "name": "当前功率",
+          "typeSpec": {
+            "type": "value",
+            "max": 10000,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "W"
+          }
+        },
+        {
+          "abilityId": 23,
+          "accessMode": "ro",
+          "code": "battery_temp_current",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-wendu2",
+            "attribute": "1152"
+          },
+          "name": "当前电池温度",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 0,
+            "scale": 1,
+            "step": 1,
+            "unit": "℃"
+          }
+        },
+        {
+          "abilityId": 25,
+          "accessMode": "ro",
+          "code": "status",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-zhuangtai",
+            "attribute": "1152"
+          },
+          "name": "状态",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "normal",
+              "Communicate_Fault",
+              "Hall_Fault",
+              "High_Temperature_Protection",
+              "Controller_Fault",
+              "Low_Voltage_Protection",
+              "Block_Protection",
+              "Accelerator_Fault",
+              "Overcurrent_Protection"
+            ]
+          }
+        },
+        {
+          "abilityId": 26,
+          "accessMode": "rw",
+          "code": "fault_detection",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_warming",
+            "attribute": "1152"
+          },
+          "name": "故障检测",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 29,
+          "accessMode": "rw",
+          "code": "bright_value",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-liangdu",
+            "attribute": "1152"
+          },
+          "name": "亮度",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 10,
+            "scale": 0,
+            "step": 1
+          }
+        },
+        {
+          "abilityId": 30,
+          "accessMode": "rw",
+          "code": "temp_value",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-lengnuan",
+            "attribute": "1152"
+          },
+          "name": "冷暖",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 0,
+            "scale": 0,
+            "step": 1
+          }
+        },
+        {
+          "abilityId": 31,
+          "accessMode": "rw",
+          "code": "work_mode",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1152"
+          },
+          "name": "工作模式",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "white",
+              "colour",
+              "scene",
+              "music"
+            ]
+          }
+        },
+        {
+          "abilityId": 32,
+          "accessMode": "rw",
+          "code": "colour_data",
+          "description": "类型：字符； Value: 000011112222； 0000：H（色度：0-360，0X0000-0X0168）； 1111：S (饱和：0-1000, 0X0000-0X03E8）； 2222：V (明度：0-1000，0X0000-0X03E8)",
+          "extensions": {
+            "iconName": "icon-dp_mode",
+            "attribute": "1152"
+          },
+          "name": "彩光",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 33,
+          "accessMode": "rw",
+          "code": "scene_data",
+          "description": "\t类型：字符; Value: 0011223344445555666677778888; 00：情景号; 11：单元切换间隔时间（0-100）; 22：单元变化时间（0-100）; 33：单元变化模式（0静态1跳变2渐变）; 4444：H（色度：0-360，0X0000-0X0168）; 5555：S (饱和：0-1000, 0X0000-0X03E8); 6666：V (明度：0-1000，0X0000-0X03E8); 7777：白光亮度（0-1000）; 8888：色温值（0-1000）; 注：数字1-8的标号对应有多少单元就有多少组",
+          "extensions": {
+            "attribute": "1152"
+          },
+          "name": "场景",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 34,
+          "accessMode": "rw",
+          "code": "music_data",
+          "description": "\t类型：字符串； Value: 011112222333344445555； 0： 变化方式，0表示直接输出，1表示渐变； 1111：H（色度：0-360，0X0000-0X0168）； 2222：S (饱和：0-1000, 0X0000-0X03E8）； 3333：V (明度：0-1000，0X0000-0X03E8）； 4444：白光亮度（0-1000）； 5555：色温值（0-1000）",
+          "extensions": {
+            "attribute": "1152"
+          },
+          "name": "音乐律动",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 35,
+          "accessMode": "rw",
+          "code": "mic_music_data",
+          "description": "类型： 字符串 Value： AABBCCDDEEFFGGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNN AA 版本 BB 0-关闭，1-打开 CC 模式编号，自定义从201开始 DD 变换方式：0 - 呼吸模式，1 -跳变模式 ， 2 - 经典模式 EE 变化速度 FF 灵敏度 GGGG 颜色1-色相饱和度 HHHH 颜色2-色相饱和度 ...... NNNN 颜色8-色相饱和度",
+          "extensions": {
+            "attribute": "1152"
+          },
+          "name": "麦克风音乐律动",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 36,
+          "accessMode": "ro",
+          "code": "battery_cycle_times",
+          "description": "",
+          "extensions": {
+            "attribute": "1152"
+          },
+          "name": "电池循环次数",
+          "typeSpec": {
+            "type": "value",
+            "max": 1000,
+            "min": 0,
+            "scale": 0,
+            "step": 1
+          }
+        },
+        {
+          "abilityId": 38,
+          "accessMode": "rw",
+          "code": "phone_discon_alarm",
+          "description": "",
+          "name": "断开手机提醒",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 101,
+          "accessMode": "rw",
+          "code": "speed_limit_1",
+          "description": "",
+          "name": "1档限速",
+          "typeSpec": {
+            "type": "value",
+            "max": 15,
+            "min": 5,
+            "scale": 0,
+            "step": 1,
+            "unit": "km/h"
+          }
+        },
+        {
+          "abilityId": 102,
+          "accessMode": "rw",
+          "code": "speed_limit_2",
+          "description": "",
+          "name": "2档限速",
+          "typeSpec": {
+            "type": "value",
+            "max": 24,
+            "min": 10,
+            "scale": 0,
+            "step": 1,
+            "unit": "km/h"
+          }
+        },
+        {
+          "abilityId": 103,
+          "accessMode": "rw",
+          "code": "speed_limit_3",
+          "description": "",
+          "extensions": {
+            "scope": ""
+          },
+          "name": "3档限速",
+          "typeSpec": {
+            "type": "value",
+            "max": 31,
+            "min": 20,
+            "scale": 0,
+            "step": 1,
+            "unit": "km/h"
+          }
+        },
+        {
+          "abilityId": 104,
+          "accessMode": "rw",
+          "code": "autopowerofftime",
+          "description": "",
+          "name": "自动关机时间",
+          "typeSpec": {
+            "type": "value",
+            "max": 90,
+            "min": 5,
+            "scale": 0,
+            "step": 5,
+            "unit": "MIN"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#f5f5ef">
+  <title>S9 本地</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-bluetooth" viewBox="0 0 24 24"><path d="m7 7 10 10-5 4V3l5 4L7 17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24"><path d="M14 5C4 5 4 19 14 19Z M18 6h3m-3 6h3m-3 6h3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0H4Z M12 14l4-6M6 12h1m5-7v1m6 6h-1"/></symbol>
+  <symbol id="i-start" viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 9-13h-6Z"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></symbol>
+  <symbol id="i-scooter" viewBox="0 0 24 24"><circle cx="5" cy="18.5" r="2.5"/><circle cx="19" cy="18.5" r="2.5"/><path d="M5 18.5 8 5H5m3 0h3M7 14l2 4h7l2-3M16.5 15a4 4 0 0 1 6 1"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="6" width="18" height="12" rx="3"/><path d="M23 10v4M6 10v4m4-4v4m4-4v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z M14 3v6h6M8 14h8m-8 3h5"/></symbol>
+</defs></svg>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark"><svg><use href="#i-scooter"/></svg></span><span>S9<span class="brand-local">本地</span></span></div>
+    <button id="preview-toggle" class="text-button">界面预览</button>
+  </header>
+  <div id="preview-banner" class="preview-banner" hidden><span>界面预览 · 示例数据，不会控制车辆</span><button id="exit-preview">退出</button></div>
+  <main>
+    <section id="page-home" class="page">
+      <div class="heading"><div><p class="eyebrow">MY SCOOTER</p><h1>我的滑板车</h1></div><button id="connect-button" class="connection"><svg><use href="#i-bluetooth"/></svg><span id="connection-label">连接车辆</span></button></div>
+      <article class="hero">
+        <div class="hero-top"><span>AOVOPRO S9</span><span class="capacity">10.4 Ah</span></div>
+        <div class="hero-main"><div><p class="hero-label">剩余电量</p><div class="battery-number"><span id="battery-value">—</span><span class="battery-unit">%</span></div><div class="hero-status"><span class="status-dot"></span><span id="battery-note">等待车辆数据</span></div></div>
+        <svg class="scooter-art" viewBox="0 0 240 160" aria-hidden="true">
+          <ellipse cx="124" cy="146" rx="107" ry="5" fill="#152d20" stroke="none" opacity=".45"/>
+          <g stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="46" cy="123" r="23" fill="#162a21" stroke="#97ab97" stroke-width="3"/><circle cx="196" cy="123" r="23" fill="#162a21" stroke="#97ab97" stroke-width="3"/>
+            <circle cx="46" cy="123" r="13" fill="#536957" stroke="#bfd09f" stroke-width="2"/><circle cx="196" cy="123" r="13" fill="#536957" stroke="#bfd09f" stroke-width="2"/>
+            <circle cx="46" cy="123" r="4" fill="#c8d9ad" stroke="none"/><circle cx="196" cy="123" r="4" fill="#c8d9ad" stroke="none"/>
+            <path d="M46 122 67 29" stroke="#d3e4af" stroke-width="8"/><path d="M56 96 65 99" stroke="#91a978" stroke-width="5"/>
+            <path d="M54 31 82 24" stroke="#172e22" stroke-width="9"/><path d="M55 29 80 23" stroke="#d5e7b8" stroke-width="4"/>
+            <path d="M68 35Q83 61 59 100" stroke="#91aa83" stroke-width="1.7" fill="none"/>
+            <path d="M59 99 73 122H175L183 113" stroke="#c7dca7" stroke-width="7" fill="none"/>
+            <path d="M75 120H170" stroke="#8faa7d" stroke-width="3"/>
+            <path d="M174 108Q191 88 211 103" stroke="#acc28e" stroke-width="7" fill="none"/>
+            <path d="M25 107Q40 93 53 101" stroke="#b3c995" stroke-width="5" fill="none"/>
+            <path d="M127 125 119 140" stroke="#829c73" stroke-width="3"/><path d="M210 103l4 4" stroke="#eea373" stroke-width="4"/>
+            <path d="M61 44 66 43" stroke="#fbf4c4" stroke-width="4"/>
+          </g>
+        </svg></div>
+        <div class="battery-track" aria-hidden="true"><div id="battery-fill"></div></div>
+        <div class="hero-bottom"><span id="hero-mode">骑行模式 · 待读取</span><span id="hero-lock">锁车状态 · 待读取</span></div>
+      </article>
+      <div class="mileage"><div><span>单次里程</span><p><strong id="trip-value">—</strong><small class="distance-unit">km</small></p></div><div><span id="total-label">总里程</span><p><strong id="total-value">—</strong><small class="distance-unit">km</small></p></div></div>
+      <div class="telemetry-cards"><div><span>电池电压</span><strong id="home-voltage-value">— V</strong></div><div><span>当前温度</span><strong id="home-temperature-value">— ℃</strong></div><div><span>当前电流</span><strong id="home-current-value">— A</strong></div><div><span>当前功率</span><strong id="home-power-value">— W</strong></div></div>
+      <div class="section-heading"><h2>快捷控制</h2><span id="control-caption">等待接入</span></div>
+      <div class="controls">
+        <button class="control-card" id="control-lock" disabled><span class="control-top"><svg id="lock-icon" viewBox="-2 0 28 24" aria-hidden="true"><path id="lock-shackle" d="M8 11V7a4 4 0 0 1 8 0v3"/><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M12 15v2"/></svg><span class="control-state" id="lock-state">待读取</span></span><strong id="lock-title">电子锁</strong><span class="control-hint" id="lock-hint">查看锁车状态</span></button>
+        <button class="control-card" id="control-light" disabled aria-pressed="false"><span class="control-top"><svg><use href="#i-light"/></svg><span class="switch" id="light-switch"></span></span><strong>前大灯</strong><span class="control-hint" id="light-hint">状态待读取</span></button>
+        <button class="control-card" id="control-cruise" disabled aria-pressed="false"><span class="control-top"><svg><use href="#i-gauge"/></svg><span class="switch" id="cruise-switch"></span></span><strong>定速巡航</strong><span class="control-hint" id="cruise-hint">状态待读取</span></button>
+        <button class="control-card" id="control-start" disabled><span class="control-top"><svg><use href="#i-start"/></svg><span class="small-chip" id="start-chip">—</span></span><strong>启动模式</strong><span class="control-hint" id="start-hint">零启动 / 非零启动</span></button>
+      </div>
+      <div class="mode-row"><div><h2>骑行模式</h2><p id="mode-note">连接后读取当前档位</p></div><div class="mode-buttons" role="group" aria-label="骑行模式"><button data-gear="0" disabled aria-pressed="false">行人</button><button data-gear="1" disabled aria-pressed="false">经济</button><button data-gear="2" disabled aria-pressed="false">日常</button><button data-gear="3" disabled aria-pressed="false">运动</button></div></div>
+      <div class="connection-note" role="status"><span class="note-dot"></span><p id="status-message">首次导入连接配置后，即可通过本地蓝牙连接车辆。</p></div>
+      <p class="local-footer">本地连接 <span>·</span> 无账号 <span>·</span> 无云端</p>
+    </section>
+    <section id="page-settings" class="page" hidden>
+      <div class="heading"><div><p class="eyebrow">PREFERENCES</p><h1>车辆设置</h1></div><span class="version">v0.2</span></div>
+      <div class="section-heading"><h2>骑行偏好</h2><span id="settings-caption">车辆设置待接入</span></div>
+      <div class="list-card">
+        <button class="list-row" id="unit-setting"><span>显示单位<small>仅影响此 App</small></span><span class="row-value"><span id="unit-value">千米</span><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row speed-setting" id="speed-setting-101" disabled><span>1 档限速<small>经济模式</small></span><span class="row-value"><span id="speed-value-101">—</span><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row speed-setting" id="speed-setting-102" disabled><span>2 档限速<small>日常模式</small></span><span class="row-value"><span id="speed-value-102">—</span><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row speed-setting" id="speed-setting-103" disabled><span>3 档限速<small>运动模式</small></span><span class="row-value"><span id="speed-value-103">—</span><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row " id="shutdown-setting" disabled><span>自动关机时间<small>每次调整 5 分钟</small></span><span class="row-value"><span id="shutdown-value">—</span><svg><use href="#i-arrow"/></svg></span></button>
+      </div>
+      <div class="section-heading"><h2>车辆信息</h2></div>
+      <div class="list-card">
+        <div class="list-row"><span>故障状态</span><span class="row-value" id="fault-value">未读取</span></div>
+        <div class="list-row"><span>电池电压</span><span class="row-value" id="voltage-value">— V</span></div>
+        <div class="list-row"><span>当前温度<small>车辆上报，传感器位置未注明</small></span><span class="row-value" id="temperature-value">— ℃</span></div>
+        <div class="list-row"><span>当前电流</span><span class="row-value" id="current-value">— A</span></div>
+        <div class="list-row"><span>当前功率</span><span class="row-value" id="power-value">— W</span></div>
+      </div>
+      <p class="field-note">未提供数据的续航、循环次数和电池温度已隐藏。</p>
+      <div class="section-heading"><h2>连接与诊断</h2></div>
+      <div class="list-card">
+        <button class="list-row" id="device-setting"><span>蓝牙设备<small id="device-subtitle">尚未选择车辆</small></span><span class="row-value"><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row" id="notification-setting"><span>电量通知<small>后台连接与通知显示权限</small></span><span class="row-value"><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row" id="diagnostics-setting"><span>设备诊断<small>查看接入状态与服务信息</small></span><span class="row-value"><svg><use href="#i-arrow"/></svg></span></button>
+        <button class="list-row" id="about-setting"><span>关于 S9 本地</span><span class="row-value">0.2.10<svg><use href="#i-arrow"/></svg></span></button>
+      </div>
+      <p class="local-footer">只为这一辆车。</p>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="主导航"><button id="nav-home" class="active" aria-current="page"><svg><use href="#i-scooter"/></svg><span>车辆</span></button><button id="nav-settings"><svg><use href="#i-settings"/></svg><span>设置</span></button></nav>
+</div>
+<div class="modal" id="modal" hidden><div class="scrim" id="scrim"></div><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1"><div class="sheet-handle"></div><div class="sheet-heading"><h2 id="sheet-title"></h2><button class="icon-button" id="close-sheet" aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div id="sheet-content"></div></section></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="app.js"></script>
+</body></html>
+
+
+
+
+
